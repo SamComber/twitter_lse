@@ -1,0 +1,154 @@
+2017-07-04 14:08:28,790 Signing request <PreparedRequest [POST]> using client <Client client_key=pfekrUmzHx0WY4gNjQaIsjmjH, client_secret=****, resource_owner_key=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2017-07-04 14:08:28,791 Including body in call to sign: True
+2017-07-04 14:08:28,798 Collected params: [('delimited', 'length'), ('oauth_nonce', '31922330591927938911499173708'), ('oauth_timestamp', '1499173708'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'pfekrUmzHx0WY4gNjQaIsjmjH'), ('oauth_token', '1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy'), ('locations', '-10.8545,49.8238,2.0215,59.4786'), ('language', 'en')]
+2017-07-04 14:08:28,800 Normalized params: delimited=length&language=en&locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&oauth_consumer_key=pfekrUmzHx0WY4gNjQaIsjmjH&oauth_nonce=31922330591927938911499173708&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1499173708&oauth_token=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy&oauth_version=1.0
+2017-07-04 14:08:28,800 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2017-07-04 14:08:28,801 Base signing string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26locations%3D-10.8545%252C49.8238%252C2.0215%252C59.4786%26oauth_consumer_key%3DpfekrUmzHx0WY4gNjQaIsjmjH%26oauth_nonce%3D31922330591927938911499173708%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1499173708%26oauth_token%3D1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy%26oauth_version%3D1.0
+2017-07-04 14:08:28,802 Signature: Tp+bzxW7PLC2zFFVKpmW3xAYgpI=
+2017-07-04 14:08:28,802 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2017-07-04 14:08:28,805 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '59', 'Authorization': 'OAuth oauth_nonce="31922330591927938911499173708", oauth_timestamp="1499173708", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="pfekrUmzHx0WY4gNjQaIsjmjH", oauth_token="1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy", oauth_signature="Tp%2BbzxW7PLC2zFFVKpmW3xAYgpI%3D"'}
+2017-07-04 14:08:28,805 Updated body: 'locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&language=en'
+2017-07-04 14:08:28,811 Starting new HTTPS connection (1): stream.twitter.com
+2017-07-04 14:08:29,557 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2017-07-04 14:08:30,952 Creating table: tweets on Engine(sqlite:///tweets_lse.db)
+2017-07-04 14:08:30,984 Creating column: user_description (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-04 14:08:30,984 Context impl SQLiteImpl.
+2017-07-04 14:08:30,984 Will assume non-transactional DDL.
+2017-07-04 14:08:31,030 Creating column: user_location (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-04 14:08:31,030 Context impl SQLiteImpl.
+2017-07-04 14:08:31,030 Will assume non-transactional DDL.
+2017-07-04 14:08:31,046 Creating column: place (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-04 14:08:31,046 Context impl SQLiteImpl.
+2017-07-04 14:08:31,046 Will assume non-transactional DDL.
+2017-07-04 14:08:31,077 Creating column: lat (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-04 14:08:31,077 Context impl SQLiteImpl.
+2017-07-04 14:08:31,077 Will assume non-transactional DDL.
+2017-07-04 14:08:31,093 Creating column: lon (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-04 14:08:31,093 Context impl SQLiteImpl.
+2017-07-04 14:08:31,093 Will assume non-transactional DDL.
+2017-07-04 14:08:31,124 Creating column: text (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-04 14:08:31,124 Context impl SQLiteImpl.
+2017-07-04 14:08:31,124 Will assume non-transactional DDL.
+2017-07-04 14:08:31,140 Creating column: user_name (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-04 14:08:31,140 Context impl SQLiteImpl.
+2017-07-04 14:08:31,140 Will assume non-transactional DDL.
+2017-07-04 14:08:31,171 Creating column: polarity (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-04 14:08:31,171 Context impl SQLiteImpl.
+2017-07-04 14:08:31,171 Will assume non-transactional DDL.
+2017-07-04 14:08:31,202 Creating column: subjectivity (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-04 14:08:31,202 Context impl SQLiteImpl.
+2017-07-04 14:08:31,202 Will assume non-transactional DDL.
+2017-07-04 14:10:38,587 Loading table: tweets on <Database(sqlite:///tweets_lse.db)>
+2017-07-04 14:10:40,362 Signing request <PreparedRequest [POST]> using client <Client client_key=pfekrUmzHx0WY4gNjQaIsjmjH, client_secret=****, resource_owner_key=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2017-07-04 14:10:40,362 Signing request <PreparedRequest [POST]> using client <Client client_key=pfekrUmzHx0WY4gNjQaIsjmjH, client_secret=****, resource_owner_key=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2017-07-04 14:10:40,363 Including body in call to sign: True
+2017-07-04 14:10:40,363 Including body in call to sign: True
+2017-07-04 14:10:40,367 Collected params: [('delimited', 'length'), ('oauth_nonce', '29623414297558068821499173840'), ('oauth_timestamp', '1499173840'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'pfekrUmzHx0WY4gNjQaIsjmjH'), ('oauth_token', '1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy'), ('locations', '-10.8545,49.8238,2.0215,59.4786'), ('language', 'en')]
+2017-07-04 14:10:40,367 Collected params: [('delimited', 'length'), ('oauth_nonce', '29623414297558068821499173840'), ('oauth_timestamp', '1499173840'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'pfekrUmzHx0WY4gNjQaIsjmjH'), ('oauth_token', '1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy'), ('locations', '-10.8545,49.8238,2.0215,59.4786'), ('language', 'en')]
+2017-07-04 14:10:40,369 Normalized params: delimited=length&language=en&locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&oauth_consumer_key=pfekrUmzHx0WY4gNjQaIsjmjH&oauth_nonce=29623414297558068821499173840&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1499173840&oauth_token=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy&oauth_version=1.0
+2017-07-04 14:10:40,369 Normalized params: delimited=length&language=en&locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&oauth_consumer_key=pfekrUmzHx0WY4gNjQaIsjmjH&oauth_nonce=29623414297558068821499173840&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1499173840&oauth_token=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy&oauth_version=1.0
+2017-07-04 14:10:40,373 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2017-07-04 14:10:40,373 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2017-07-04 14:10:40,374 Base signing string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26locations%3D-10.8545%252C49.8238%252C2.0215%252C59.4786%26oauth_consumer_key%3DpfekrUmzHx0WY4gNjQaIsjmjH%26oauth_nonce%3D29623414297558068821499173840%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1499173840%26oauth_token%3D1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy%26oauth_version%3D1.0
+2017-07-04 14:10:40,374 Base signing string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26locations%3D-10.8545%252C49.8238%252C2.0215%252C59.4786%26oauth_consumer_key%3DpfekrUmzHx0WY4gNjQaIsjmjH%26oauth_nonce%3D29623414297558068821499173840%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1499173840%26oauth_token%3D1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy%26oauth_version%3D1.0
+2017-07-04 14:10:40,376 Signature: 3/DrEBzMIZNWmOu7Uendv+5jso8=
+2017-07-04 14:10:40,376 Signature: 3/DrEBzMIZNWmOu7Uendv+5jso8=
+2017-07-04 14:10:40,378 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2017-07-04 14:10:40,378 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2017-07-04 14:10:40,378 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '59', 'Authorization': 'OAuth oauth_nonce="29623414297558068821499173840", oauth_timestamp="1499173840", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="pfekrUmzHx0WY4gNjQaIsjmjH", oauth_token="1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy", oauth_signature="3%2FDrEBzMIZNWmOu7Uendv%2B5jso8%3D"'}
+2017-07-04 14:10:40,378 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '59', 'Authorization': 'OAuth oauth_nonce="29623414297558068821499173840", oauth_timestamp="1499173840", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="pfekrUmzHx0WY4gNjQaIsjmjH", oauth_token="1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy", oauth_signature="3%2FDrEBzMIZNWmOu7Uendv%2B5jso8%3D"'}
+2017-07-04 14:10:40,379 Updated body: 'locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&language=en'
+2017-07-04 14:10:40,379 Updated body: 'locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&language=en'
+2017-07-04 14:10:40,385 Starting new HTTPS connection (1): stream.twitter.com
+2017-07-04 14:10:40,385 Starting new HTTPS connection (1): stream.twitter.com
+2017-07-04 14:10:41,009 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2017-07-04 14:10:41,009 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2017-07-07 12:03:53,708 Signing request <PreparedRequest [POST]> using client <Client client_key=pfekrUmzHx0WY4gNjQaIsjmjH, client_secret=****, resource_owner_key=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2017-07-07 12:03:53,708 Including body in call to sign: True
+2017-07-07 12:03:53,744 Collected params: [('delimited', 'length'), ('oauth_nonce', '121512635587887209011499425433'), ('oauth_timestamp', '1499425433'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'pfekrUmzHx0WY4gNjQaIsjmjH'), ('oauth_token', '1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy'), ('locations', '-10.8545,49.8238,2.0215,59.4786'), ('language', 'en')]
+2017-07-07 12:03:53,744 Normalized params: delimited=length&language=en&locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&oauth_consumer_key=pfekrUmzHx0WY4gNjQaIsjmjH&oauth_nonce=121512635587887209011499425433&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1499425433&oauth_token=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy&oauth_version=1.0
+2017-07-07 12:03:53,744 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2017-07-07 12:03:53,744 Base signing string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26locations%3D-10.8545%252C49.8238%252C2.0215%252C59.4786%26oauth_consumer_key%3DpfekrUmzHx0WY4gNjQaIsjmjH%26oauth_nonce%3D121512635587887209011499425433%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1499425433%26oauth_token%3D1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy%26oauth_version%3D1.0
+2017-07-07 12:03:53,744 Signature: sIYAyKMB5bNKtRlS/+rM9mYj1xA=
+2017-07-07 12:03:53,744 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2017-07-07 12:03:53,760 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '59', 'Authorization': 'OAuth oauth_nonce="121512635587887209011499425433", oauth_timestamp="1499425433", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="pfekrUmzHx0WY4gNjQaIsjmjH", oauth_token="1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy", oauth_signature="sIYAyKMB5bNKtRlS%2F%2BrM9mYj1xA%3D"'}
+2017-07-07 12:03:53,760 Updated body: 'locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&language=en'
+2017-07-07 12:03:53,760 Starting new HTTPS connection (1): stream.twitter.com
+2017-07-07 12:03:54,465 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2017-07-07 12:04:01,826 Creating column: created_at (<class 'sqlalchemy.sql.sqltypes.DateTime'>) on 'tweets'
+2017-07-07 12:04:01,826 Context impl SQLiteImpl.
+2017-07-07 12:04:01,826 Will assume non-transactional DDL.
+2017-07-07 12:04:01,857 Creating column: retweets (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:04:01,857 Context impl SQLiteImpl.
+2017-07-07 12:04:01,857 Will assume non-transactional DDL.
+2017-07-07 12:04:01,888 Creating column: favourites (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:04:01,888 Context impl SQLiteImpl.
+2017-07-07 12:04:01,888 Will assume non-transactional DDL.
+2017-07-07 12:04:01,920 Creating column: followers_count (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:04:01,920 Context impl SQLiteImpl.
+2017-07-07 12:04:01,920 Will assume non-transactional DDL.
+2017-07-07 12:04:17,081 Loading table: tweets on <Database(sqlite:///tweets_lse.db)>
+2017-07-07 12:04:27,776 Loading table: tweets on <Database(sqlite:///tweets_lse.db)>
+2017-07-07 12:49:57,900 Signing request <PreparedRequest [POST]> using client <Client client_key=pfekrUmzHx0WY4gNjQaIsjmjH, client_secret=****, resource_owner_key=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2017-07-07 12:49:57,904 Including body in call to sign: True
+2017-07-07 12:49:57,916 Collected params: [('delimited', 'length'), ('oauth_nonce', '168685978513192503711499428197'), ('oauth_timestamp', '1499428197'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'pfekrUmzHx0WY4gNjQaIsjmjH'), ('oauth_token', '1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy'), ('locations', '-10.8545,49.8238,2.0215,59.4786'), ('language', 'en')]
+2017-07-07 12:49:57,916 Normalized params: delimited=length&language=en&locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&oauth_consumer_key=pfekrUmzHx0WY4gNjQaIsjmjH&oauth_nonce=168685978513192503711499428197&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1499428197&oauth_token=1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy&oauth_version=1.0
+2017-07-07 12:49:57,916 Normalized URI: https://stream.twitter.com/1.1/statuses/filter.json
+2017-07-07 12:49:57,916 Base signing string: POST&https%3A%2F%2Fstream.twitter.com%2F1.1%2Fstatuses%2Ffilter.json&delimited%3Dlength%26language%3Den%26locations%3D-10.8545%252C49.8238%252C2.0215%252C59.4786%26oauth_consumer_key%3DpfekrUmzHx0WY4gNjQaIsjmjH%26oauth_nonce%3D168685978513192503711499428197%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1499428197%26oauth_token%3D1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy%26oauth_version%3D1.0
+2017-07-07 12:49:57,916 Signature: pl4AuOn4EPzw2zqV9LihRk3YcVg=
+2017-07-07 12:49:57,920 Updated url: https://stream.twitter.com/1.1/statuses/filter.json?delimited=length
+2017-07-07 12:49:57,920 Updated headers: {'Content-Type': 'application/x-www-form-urlencoded', 'Content-Length': '59', 'Authorization': 'OAuth oauth_nonce="168685978513192503711499428197", oauth_timestamp="1499428197", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="pfekrUmzHx0WY4gNjQaIsjmjH", oauth_token="1439343834-7xzhsIyOJYETIwiMaaZXj3qm1gQq0bge1QwgwRy", oauth_signature="pl4AuOn4EPzw2zqV9LihRk3YcVg%3D"'}
+2017-07-07 12:49:57,924 Updated body: 'locations=-10.8545%2C49.8238%2C2.0215%2C59.4786&language=en'
+2017-07-07 12:49:57,932 Starting new HTTPS connection (1): stream.twitter.com
+2017-07-07 12:49:58,566 https://stream.twitter.com:443 "POST /1.1/statuses/filter.json?delimited=length HTTP/1.1" 200 None
+2017-07-07 12:50:02,057 Creating table: tweets on Engine(sqlite:///tweets_lse.db)
+2017-07-07 12:50:02,089 Creating column: created_at (<class 'sqlalchemy.sql.sqltypes.DateTime'>) on 'tweets'
+2017-07-07 12:50:02,089 Context impl SQLiteImpl.
+2017-07-07 12:50:02,089 Will assume non-transactional DDL.
+2017-07-07 12:50:02,151 Creating column: retweets (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:50:02,151 Context impl SQLiteImpl.
+2017-07-07 12:50:02,151 Will assume non-transactional DDL.
+2017-07-07 12:50:02,182 Creating column: favourites (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:50:02,182 Context impl SQLiteImpl.
+2017-07-07 12:50:02,182 Will assume non-transactional DDL.
+2017-07-07 12:50:02,214 Creating column: user_description (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-07 12:50:02,214 Context impl SQLiteImpl.
+2017-07-07 12:50:02,214 Will assume non-transactional DDL.
+2017-07-07 12:50:02,229 Creating column: followers_count (<class 'sqlalchemy.sql.sqltypes.Integer'>) on 'tweets'
+2017-07-07 12:50:02,229 Context impl SQLiteImpl.
+2017-07-07 12:50:02,245 Will assume non-transactional DDL.
+2017-07-07 12:50:02,260 Creating column: user_location (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-07 12:50:02,260 Context impl SQLiteImpl.
+2017-07-07 12:50:02,260 Will assume non-transactional DDL.
+2017-07-07 12:50:02,307 Creating column: place (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-07 12:50:02,307 Context impl SQLiteImpl.
+2017-07-07 12:50:02,307 Will assume non-transactional DDL.
+2017-07-07 12:50:02,323 Creating column: lat (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-07 12:50:02,339 Context impl SQLiteImpl.
+2017-07-07 12:50:02,339 Will assume non-transactional DDL.
+2017-07-07 12:50:02,354 Creating column: lon (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-07 12:50:02,354 Context impl SQLiteImpl.
+2017-07-07 12:50:02,354 Will assume non-transactional DDL.
+2017-07-07 12:50:02,385 Creating column: text (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-07 12:50:02,385 Context impl SQLiteImpl.
+2017-07-07 12:50:02,385 Will assume non-transactional DDL.
+2017-07-07 12:50:02,401 Creating column: user_name (<class 'sqlalchemy.sql.sqltypes.UnicodeText'>) on 'tweets'
+2017-07-07 12:50:02,417 Context impl SQLiteImpl.
+2017-07-07 12:50:02,417 Will assume non-transactional DDL.
+2017-07-07 12:50:02,432 Creating column: polarity (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-07 12:50:02,432 Context impl SQLiteImpl.
+2017-07-07 12:50:02,432 Will assume non-transactional DDL.
+2017-07-07 12:50:02,464 Creating column: subjectivity (<class 'sqlalchemy.sql.sqltypes.Float'>) on 'tweets'
+2017-07-07 12:50:02,464 Context impl SQLiteImpl.
+2017-07-07 12:50:02,464 Will assume non-transactional DDL.
+2017-07-07 12:51:21,111 Loading table: tweets on <Database(sqlite:///tweets_lse.db)>
+2017-07-07 12:52:27,667 Starting new HTTPS connection (1): api.receptiviti.com
+2017-07-07 12:52:28,493 https://api.receptiviti.com:443 "POST //v2/api/person HTTP/1.1" 200 11951
+2017-07-07 12:53:11,300 Starting new HTTPS connection (1): api.receptiviti.com
+2017-07-07 12:53:11,990 https://api.receptiviti.com:443 "POST //v2/api/person HTTP/1.1" 200 12419
+2017-07-07 12:54:43,507 Starting new HTTPS connection (1): api.receptiviti.com
+2017-07-07 12:54:44,382 https://api.receptiviti.com:443 "POST //v2/api/person HTTP/1.1" 200 11951
+2017-07-07 12:55:08,466 Starting new HTTPS connection (1): api.receptiviti.com
+2017-07-07 12:55:09,161 https://api.receptiviti.com:443 "POST //v2/api/person HTTP/1.1" 200 11951
+2017-07-07 12:55:53,653 Starting new HTTPS connection (1): api.receptiviti.com
+2017-07-07 12:55:54,431 https://api.receptiviti.com:443 "POST //v2/api/person HTTP/1.1" 200 11951
