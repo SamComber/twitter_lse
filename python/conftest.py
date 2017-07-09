@@ -2,10 +2,6 @@
 
 import pytest
 
-content = '''
-FEMALE MODELS NEEDED for NEXT WEEK - 11am to 3pm -TFP HAIR N MAKEUP on - mon 10th july, tues… https://t.co/1f66MQ4Weh
-'''
-
 def pytest_addoption(parser):
     parser.addoption("--baseurl", action="store", default="https://app.receptiviti.com", help="Specify this in the format https://<target_domain_name>")
     parser.addoption("--key", action="store", default=None, help="The API key for the test user")

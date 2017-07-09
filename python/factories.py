@@ -2,12 +2,21 @@ from datetime import datetime
 import os
 import random
 import uuid
-from conftest import content
+import pytest
+import sqlite3
+import os
+import pandas as pd
 
-__author__ = 'skaranth'
+cnx = sqlite3.connect(os.path.join(os.path.dirname('__file__'), 'tweets_lse.db'))
+
+#  query sqlite table
+lse_df = pd.read_sql_query('SELECT * FROM tweets', cnx)
+
+content = list(lse_df['text'])
 
 
 def get_content_data(**kwargs):
+
     attribs = {
         "language_content": content,
         "content_source": random.randint(1, 2),
